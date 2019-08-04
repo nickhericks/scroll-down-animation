@@ -8,7 +8,7 @@ Down-pointing emoji is animated (with time delay) to reminder user to scroll dow
 Because the landing screen on [my website](https://nickhericks.com) takes up the full viewport, I wanted a way to indicate to users that they should simply scroll down to view more content "below the fold." Instead of a simple down arrow I thought it might be fun to use the down-pointing emoji instead. The emoji is time delayed.
 
 ## Using the animated hand wave emoji
-1. Add the span tag to your HTML file: `<span class="wave">👋</span>`
+1. Add the span tag to your HTML file: `	<div class="arrow">👇</div>`
 
 2. Add the following CSS to your project's CSS file:
 ```CSS
