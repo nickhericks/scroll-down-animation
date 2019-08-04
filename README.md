@@ -12,25 +12,39 @@ Because the landing screen on [my website](https://nickhericks.com) takes up the
 
 2. Add the following CSS to your project's CSS file:
 ```CSS
-.wave {
-  animation-name: wave-animation;  /* Name of @keyframes element below */
-  animation-duration: .75s;  /* Wave speed */
+/* down-pointing emoji to remind user of scrolling */
+.arrow {
+  font-size: 48px;
+  display: block;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  position: absolute;
+  bottom: 25px;
+  width: 100vw;
+  text-align: center;
+  animation-name: scroll-down;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2.5s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-play-state: paused;
-  transform-origin: 70% 70%;  /* Pivot from bottom-left palm */
-  display: inline-block;
-  font-size: 8rem;
 }
 
-.wave:hover {
-  animation-play-state: running; /* Play animation on mouse hover */
+@keyframes scroll-down {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
 }
+```
 
-@keyframes wave-animation {
-  0% { transform: rotate( 0deg ) }
-  25% { transform: rotate( -10deg ) }
-  75% { transform: rotate( 12deg ) }
-  100% { transform: rotate( 0deg ) }
-}
+3. Add the following JavaScript to your project's JS file:
+```javascript
+// select scroll down helper emoji
+const arrow = document.querySelector('.arrow');
+
+// delay for scroll reminder down-pointing emoji
+const scrollDelay = 7000;
+
+// Display down-pointing emoji to tell user to scroll down
+window.setTimeout( function() {
+	arrow.style.opacity = '1';
+}, scrollDelay);
 ```
