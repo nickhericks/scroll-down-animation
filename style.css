@@ -1,8 +1,8 @@
 /* down-pointing emoji to remind user of scrolling */
 .arrow {
+	opacity: 0;
 	font-size: 48px;
 	display: block;
-	opacity: 0;
 	transition: opacity 1s ease-in;
 	position: absolute;
 	bottom: 25px;
