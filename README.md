@@ -32,7 +32,7 @@ Because the landing screen on [my website](https://nickhericks.com) takes up the
 }
 
 .arrow::before {
-  content: "👇";
+content: "👇";
 }
 
 @keyframes scroll-down {
