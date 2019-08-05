@@ -2,7 +2,10 @@
 .arrow {
 	opacity: 0;
 	font-size: 48px;
-	display: block;
+	/* display: block; */
+	-webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
 	transition: opacity 1s ease-in;
 	position: absolute;
 	bottom: 25px;
@@ -12,6 +15,10 @@
 	animation-timing-function: ease-in-out;
 	animation-duration: 2.5s;
 	animation-iteration-count: infinite;
+}
+
+.arrow::before {
+	content: "👇";
 }
 
 @keyframes scroll-down {
